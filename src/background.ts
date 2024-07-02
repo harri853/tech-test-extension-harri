@@ -40,7 +40,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       return true;
     }
   } catch (error) {
-    console.error('Error handling message:', error);
     sendResponse({ status: 'error', error: error });
     return true; // Keep the messaging channel open for sendResponse
   }
